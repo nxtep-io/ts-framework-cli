@@ -1,0 +1,18 @@
+
+
+TS Framework Console
+====================
+
+Usage: 
+
+  - help()            Displays the REPL help
+  - clear()           Clears the REPL console
+
+
+Global Context:
+
+  - server            The current server instance
+
+All registered components will be available in the global scope.
+
+  

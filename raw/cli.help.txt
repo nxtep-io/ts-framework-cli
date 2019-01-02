@@ -1,0 +1,19 @@
+Environment variables:
+
+  - ENTRYPOINT:  Sets server entrypoint for execution. Defaults to: "./api/server.ts"
+  - NODE_ENV:    Sets the environment to run the server. Defaults to: "development"
+  - PORT:        Sets the port to listen to. Defaults to: "3000"
+
+Getting started:
+
+  $ ts-framework new app
+  $ cd app/
+  $ yarn start
+
+Generating components:
+
+  $ ts-framework new controller "test"
+  $ ts-framework new service "uptime"
+  $ ts-framework new job "backup"
+ 
+ 

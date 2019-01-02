@@ -1,0 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var DatabaseConsoleCommand_1 = require("./DatabaseConsoleCommand");
+exports.DatabaseConsoleCommand = DatabaseConsoleCommand_1.default;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9saWIvZGF0YWJhc2UvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxtRUFBNkU7QUFBcEUsMERBQUEsT0FBTyxDQUEwQiIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCB7IGRlZmF1bHQgYXMgRGF0YWJhc2VDb25zb2xlQ29tbWFuZCB9IGZyb20gXCIuL0RhdGFiYXNlQ29uc29sZUNvbW1hbmRcIjtcbiJdfQ==
