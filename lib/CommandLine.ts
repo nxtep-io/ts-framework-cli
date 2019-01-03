@@ -38,8 +38,6 @@ export default class CommandLine {
   ];
 
   constructor(public options: CommandLineOptions = {}) {
-    const Package = require("../package.json");
-
     // Prepare logger and initial yargs instance
     this.yargs = yargs.usage("Usage: $0 <command> [...args]").wrap(Math.min(120, yargs.terminalWidth()));
 

@@ -38,6 +38,10 @@
       "git add"
     ]
   },
+  "resolutions": {
+    "nodemon/upath": "1.1.0",
+    "nodemon/**/upath": "1.1.0"
+  },
   "dependencies": {
     "@types/json5": "^0.0.30",
     "@types/yargs": "^12.0.5",
@@ -52,7 +56,7 @@
     "husky": "^1.0.0-rc.13",
     "jest": "^23.4.2",
     "lint-staged": "^7.2.0",
-    "nodemon": "^1.12.1",
+    "nodemon": "^1.18.9",
     "nxtep-typedoc-theme": "nxtep-io/nxtep-typedoc-theme",
     "prettier": "^1.14.0",
     "rimraf": "^2.6.2",
