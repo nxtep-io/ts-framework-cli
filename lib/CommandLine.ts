@@ -4,6 +4,7 @@ import { Logger, LoggerInstance } from "ts-framework-common";
 import * as yargs from "yargs";
 import BaseCommand from "./BaseCommand";
 import * as Basic from "./commands";
+import * as Database from "./database";
 
 export interface CommandLineOptions {
   logger?: LoggerInstance;
@@ -31,7 +32,9 @@ export default class CommandLine {
     Basic.ConsoleCommand,
     Basic.RunCommand,
     Basic.WatchCommand,
+    Basic.InfoCommand,
     Basic.CleanCommand,
+    Database.DatabaseConsoleCommand,
   ];
 
   constructor(public options: CommandLineOptions = {}) {
@@ -42,7 +45,7 @@ export default class CommandLine {
 
     // Prepare verbose option
     this.yargs
-      .scriptName(Package.name)
+      .scriptName('ts-framework')
       .boolean("verbose")
       .alias("V", "verbose")
       .describe("verbose", "Runs command in verbose mode");

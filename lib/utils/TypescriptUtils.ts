@@ -4,6 +4,23 @@ import * as JSON5 from "json5";
 import { BaseError } from "ts-framework-common";
 
 /**
+ * Gets config from current directory package.json file
+ */
+export const pkgConfig = async function tsConfig() {
+  // Try to find pkg file in current directory
+  const pkgConfigPath = Path.resolve(process.cwd(), "package.json");
+  const pkgConfigRaw = fs.readFileSync(pkgConfigPath);
+
+  if (!pkgConfigRaw || !pkgConfigRaw.toString()) {
+    throw new BaseError(`Could not load Package information file from: "${pkgConfigPath}"`);
+  }
+
+  // TODO: Handle exceptions here
+  return JSON5.parse(pkgConfigRaw.toString());
+};
+
+
+/**
  * Gets ts config from current directory safely
  */
 export const tsConfig = async function tsConfig() {

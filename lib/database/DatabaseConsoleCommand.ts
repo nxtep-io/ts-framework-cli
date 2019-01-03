@@ -1,5 +1,6 @@
-import { Database } from "ts-framework-common";
+import { BaseError } from "ts-framework-common";
 import RunCommand from "../BaseCommand";
+import { getDatabases } from "../utils";
 
 export default class DatabaseCommand extends RunCommand {
   command = {
@@ -33,24 +34,27 @@ export default class DatabaseCommand extends RunCommand {
     await instance.onInit();
     await instance.onReady();
 
-    // Find database instance
-    const db = instance.components().find((component) => {
-      // Check if component extends Database abstract class
-      const parent = Object.getPrototypeOf(component.constructor);
-      const base = Object.getPrototypeOf(parent);
-      return base.name === 'Database';
-    });
+    // Find database instance    
+    const dbs = await getDatabases(instance);
 
-    if (!db) {
-      this.logger.error('No database registered in the server instance');
-      setTimeout(() => process.exit(-1), 1000);
-      return;
+    if (!dbs || !dbs.length) {
+      throw new BaseError(
+        // tslint:disable-next-line:max-line-length
+        'Could not find any database registered in the supplied server instance, make sure it\'s registered as a child component',
+      );
     }
 
-    if (db && db['connection']) {
-      this.logger.info('Running database query', { query: options.query });
-      console.log(await db['connection'].query(options.query));
+    // TODO: Support multiple databases
+    const db = dbs[0];
+
+    if (!db || !db.query) {
+      throw new BaseError(
+        'The database has an unknown interface, make sure it\'s a TS Framework module and that it\'s updated'
+      );
     }
+
+    this.logger.info('Running database query', { database: db.options.name, query: options.query });
+    this.logger.info('Database query result', { result: await db.query(options.query) });
     return;
   }
 }

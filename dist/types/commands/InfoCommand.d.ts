@@ -1,5 +1,5 @@
 import BaseCommand from "../BaseCommand";
-export default class ListenCommand extends BaseCommand {
+export default class InfoCommand extends BaseCommand {
     command: {
         syntax: string;
         description: string;

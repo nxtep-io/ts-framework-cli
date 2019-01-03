@@ -1,6 +1,7 @@
 import RunCommand from "./RunCommand";
+import BaseCommand from "../BaseCommand";
 
-export default class ListenCommand extends RunCommand {
+export default class ListenCommand extends BaseCommand {
   command = {
     // Override specific configiurations
     syntax: "listen [entrypoint]",
