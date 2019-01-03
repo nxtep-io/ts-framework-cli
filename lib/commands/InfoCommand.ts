@@ -46,6 +46,7 @@ export default class InfoCommand extends BaseCommand {
       "\n--------------------------------------------------------------------------------\n" +
       "                                                                                  \n" +
       "        ts-framework                                                              \n" +
+      "        ============                                                              \n" +
       "                                                                                  \n" +
       `        Framework version:   ${tsFramework}                                       \n` +
       "                                                                                  \n" +

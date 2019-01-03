@@ -75,7 +75,9 @@
 								<li class="tsd-kind-class tsd-is-external"><a href="classes/cleancommand.html" class="tsd-kind-icon">Clean<wbr>Command</a></li>
 								<li class="tsd-kind-class tsd-is-external"><a href="classes/commandline.html" class="tsd-kind-icon">Command<wbr>Line</a></li>
 								<li class="tsd-kind-class tsd-is-external"><a href="classes/consolecommand.html" class="tsd-kind-icon">Console<wbr>Command</a></li>
+								<li class="tsd-kind-class tsd-is-external"><a href="classes/databasecommand.html" class="tsd-kind-icon">Database<wbr>Command</a></li>
 								<li class="tsd-kind-class tsd-is-external"><a href="classes/generatecommand.html" class="tsd-kind-icon">Generate<wbr>Command</a></li>
+								<li class="tsd-kind-class tsd-is-external"><a href="classes/infocommand.html" class="tsd-kind-icon">Info<wbr>Command</a></li>
 								<li class="tsd-kind-class tsd-is-external"><a href="classes/listencommand.html" class="tsd-kind-icon">Listen<wbr>Command</a></li>
 								<li class="tsd-kind-class tsd-is-external"><a href="classes/watchcommand.html" class="tsd-kind-icon">Watch<wbr>Command</a></li>
 							</ul>
@@ -101,6 +103,8 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#exec" class="tsd-kind-icon">exec</a></li>
+								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#getdatabases" class="tsd-kind-icon">get<wbr>Databases</a></li>
+								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#pkgconfig" class="tsd-kind-icon">pkg<wbr>Config</a></li>
 								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#tsconfig" class="tsd-kind-icon">ts<wbr>Config</a></li>
 							</ul>
 						</section>
@@ -115,7 +119,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>ENTRYPOINT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;process.env.ENTRYPOINT || &quot;./api/server.ts&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in CommandLine.ts:13</li>
+							<li>Defined in <a href="https://github.com/nxtep-io/ts-framework-cli/blob/d6546e8/lib/CommandLine.ts#L14">CommandLine.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -125,7 +129,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>ENV<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;process.env.NODE_ENV || &quot;development&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in CommandLine.ts:14</li>
+							<li>Defined in <a href="https://github.com/nxtep-io/ts-framework-cli/blob/d6546e8/lib/CommandLine.ts#L15">CommandLine.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -135,7 +139,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>PORT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">3000</span><span class="tsd-signature-symbol"> =&nbsp;process.env.PORT || 3000</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in CommandLine.ts:15</li>
+							<li>Defined in <a href="https://github.com/nxtep-io/ts-framework-cli/blob/d6546e8/lib/CommandLine.ts#L16">CommandLine.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -152,7 +156,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utils/ProcessUtils.ts:6</li>
+									<li>Defined in <a href="https://github.com/nxtep-io/ts-framework-cli/blob/d6546e8/lib/utils/ProcessUtils.ts#L6">utils/ProcessUtils.ts:6</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -171,6 +175,51 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
+					<a name="getdatabases" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Databases</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Databases<span class="tsd-signature-symbol">(</span>server<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Server</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Database</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/nxtep-io/ts-framework-cli/blob/d6546e8/lib/utils/ServerUtils.ts#L4">utils/ServerUtils.ts:4</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>server: <span class="tsd-signature-type">Server</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Database</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
+					<a name="pkgconfig" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> pkg<wbr>Config</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">pkg<wbr>Config<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/nxtep-io/ts-framework-cli/blob/d6546e8/lib/utils/TypescriptUtils.ts#L9">utils/TypescriptUtils.ts:9</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets config from current directory package.json file</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
 					<a name="tsconfig" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> ts<wbr>Config</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-is-external">
@@ -180,7 +229,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in utils/TypescriptUtils.ts:9</li>
+									<li>Defined in <a href="https://github.com/nxtep-io/ts-framework-cli/blob/d6546e8/lib/utils/TypescriptUtils.ts#L26">utils/TypescriptUtils.ts:26</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -220,7 +269,13 @@
 						<a href="classes/consolecommand.html" class="tsd-kind-icon">Console<wbr>Command</a>
 					</li>
 					<li class=" tsd-kind-class tsd-is-external">
+						<a href="classes/databasecommand.html" class="tsd-kind-icon">Database<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-external">
 						<a href="classes/generatecommand.html" class="tsd-kind-icon">Generate<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-external">
+						<a href="classes/infocommand.html" class="tsd-kind-icon">Info<wbr>Command</a>
 					</li>
 					<li class=" tsd-kind-class tsd-is-external">
 						<a href="classes/listencommand.html" class="tsd-kind-icon">Listen<wbr>Command</a>
@@ -251,6 +306,12 @@
 					</li>
 					<li class=" tsd-kind-function tsd-is-external">
 						<a href="globals.html#exec" class="tsd-kind-icon">exec</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="globals.html#getdatabases" class="tsd-kind-icon">get<wbr>Databases</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="globals.html#pkgconfig" class="tsd-kind-icon">pkg<wbr>Config</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-external">
 						<a href="globals.html#tsconfig" class="tsd-kind-icon">ts<wbr>Config</a>
