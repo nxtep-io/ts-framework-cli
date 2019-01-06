@@ -38,7 +38,14 @@ export default class GenerateCommand extends BaseCommand {
   };
 
   public static APP_COMPONENT = "app";
-  public static AVAILABLE_COMPOENENTS = [GenerateCommand.APP_COMPONENT, "controller", "service", "job", "model"];
+  public static AVAILABLE_COMPOENENTS = [
+    GenerateCommand.APP_COMPONENT, 
+    "controller", 
+    "service", 
+    "job", 
+    "model", 
+    "migration"
+  ];
 
   constructor(options = {}) {
     super(options);

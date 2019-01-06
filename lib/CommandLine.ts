@@ -35,6 +35,7 @@ export default class CommandLine {
     Basic.InfoCommand,
     Basic.CleanCommand,
     Database.DatabaseConsoleCommand,
+    Database.DatabaseSchemaCommand,
     Database.DatabaseDropCommand,
     Database.DatabaseMigrateCommand,
   ];

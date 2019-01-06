@@ -2319,7 +2319,7 @@ gauge@~2.7.3:
 
 generator-ts-framework@nxtep-io/generator-ts-framework:
   version "1.0.0"
-  resolved "https://codeload.github.com/nxtep-io/generator-ts-framework/tar.gz/473a880a97a11bb12aac83a1c72b03096c29813f"
+  resolved "https://codeload.github.com/nxtep-io/generator-ts-framework/tar.gz/4ab82ba49b9a027ec70fc7960d6b39f8f2c7b2ed"
   dependencies:
     chalk "^2.1.0"
     merge ">=1.2.1"
@@ -6546,6 +6546,25 @@ typedoc@^0.13.0:
     shelljs "^0.8.2"
     typedoc-default-themes "^0.5.0"
     typescript "3.1.x"
+
+typeorm@^0.2.11:
+  version "0.2.11"
+  resolved "https://registry.yarnpkg.com/typeorm/-/typeorm-0.2.11.tgz#d81a295ed822e05043f2920cd539f52a963896b0"
+  integrity sha512-B+lA/LUjIc2MbAElfOxIIx2s+fijdRp0I/4jFGiMVBe61AX9aFz7gI68kk6wdmYFg798c5Oa+76Q1X9WsnqVTQ==
+  dependencies:
+    app-root-path "^2.0.1"
+    buffer "^5.1.0"
+    chalk "^2.3.2"
+    cli-highlight "^1.2.3"
+    debug "^3.1.0"
+    dotenv "^5.0.1"
+    glob "^7.1.2"
+    js-yaml "^3.11.0"
+    mkdirp "^0.5.1"
+    reflect-metadata "^0.1.12"
+    xml2js "^0.4.17"
+    yargonaut "^1.1.2"
+    yargs "^12.0.5"
 
 typeorm@^0.2.4:
   version "0.2.10"
