@@ -17,21 +17,13 @@ export default class DatabaseDropCommand extends RunCommand {
   };
 
   public async run({ entrypoint = this.options.entrypoint, ...options }) {
-    // Force production unless flag was supplied
+    // Force development mode for TS support using TS Node
     const port = options.port || this.options.port;
-    const env = options.development ? "development" : "production";
-
-    const distributionFile = await this.getEntrypoint({ entrypoint, env });
-    this.logger.debug(`Starting database in "${env}" environment from ${distributionFile}`);
-
-    if (env !== "development") {
-      // Force production environment
-      process.env.NODE_ENV = "production";
-    }
+    const distributionFile = await this.getEntrypoint({ entrypoint, env: 'development' });
+    this.logger.debug(`Starting database in development environment from ${distributionFile}`);
 
     // Manually start the server lifecycle without listening to express port
     const instance = await this.load(distributionFile, { ...options, port });
-    // await instance.onInit();
 
     // Find database instance    
     const dbs = await getDatabases(instance);

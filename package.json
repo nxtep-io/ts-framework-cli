@@ -1,6 +1,6 @@
 {
   "name": "ts-framework-cli",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "A minimalistic framework for Typescript applications",
   "author": "Luis Brito <luis@nxtep.io>",
   "license": "MIT",
@@ -45,7 +45,7 @@
   "dependencies": {
     "@types/json5": "^0.0.30",
     "@types/yargs": "^12.0.5",
-    "generator-ts-framework": "nxtep-io/generator-ts-framework",
+    "generator-ts-framework": "nxtep-io/generator-ts-framework#1.1.0",
     "json": "^9.0.6",
     "json5": "^2.1.0",
     "ts-framework": "nxtep-io/ts-framework#2.3.2",
