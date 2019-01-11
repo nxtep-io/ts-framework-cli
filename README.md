@@ -7,10 +7,10 @@ A minimalistic web framework for Typescript applications.
 
 ```bash
 # Add to your dependencies using yarn
-yarn add "nxtep-io/nano-fsm#master";
+yarn add "nxtep-io/ts-framework-cli";
 
 # Or, using NPM
-npm install "github:nxtep-io/nano-fsm#master";
+npm install "github:nxtep-io/ts-framework-cli";
 ```
 
 ## API Reference
