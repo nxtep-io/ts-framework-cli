@@ -14,7 +14,7 @@ export default class WatchCommand extends BaseCommand {
         .describe("p", "The PORT to listen to, can be overriden with PORT env variable");
 
       yargs
-        .boolean("i")
+        .string("i")
         .alias("i", "inspect")
         .describe("i", "Starts development server with inspection flags for debug");
 
@@ -39,6 +39,7 @@ export default class WatchCommand extends BaseCommand {
 
     Nodemon({
       exec,
+      debug: !!options.inspect,
       delay: "1000",
       ext: "ts,js",
       cwd: process.cwd(),

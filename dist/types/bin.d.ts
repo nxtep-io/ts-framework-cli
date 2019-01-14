@@ -1,1 +1,1 @@
-#!/usr/bin/env 'node' "--experimental-repl-await"
+#!/usr/bin/env node --experimental-repl-await
