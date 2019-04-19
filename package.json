@@ -1,12 +1,12 @@
 {
   "name": "ts-framework-cli",
-  "version": "2.4.4",
+  "version": "2.5.0",
   "description": "A minimalistic framework for Typescript applications",
   "author": "Luis Brito <luis@nxtep.io>",
   "license": "MIT",
   "main": "./dist/index.js",
   "bin": {
-    "ts-framework": "./dist/bin.js"
+    "ts-framework": "./bin/ts-framework"
   },
   "typings": "./dist/types/index.d.ts",
   "files": [

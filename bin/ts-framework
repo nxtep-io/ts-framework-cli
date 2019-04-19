@@ -1,0 +1,30 @@
+#!/bin/bash
+
+set +x;
+verbose=
+
+# Prepare verbose mode flag
+case "$1" in
+-v|--v|--ve|--ver|--verb|--verbo|--verbos|--verbose)
+    verbose=1
+    shift ;;
+esac
+
+# Prepare script paths
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P)
+  base_path=$( expr "$parent_path" : "\(.*\)\/bin" );
+else
+  parent_path=$(dirname "$(readlink -f "$0")")
+  base_path=$( expr "$parent_path" : "\(.*\)\/bin" );
+fi
+
+# Log base path if in verbose mode
+if [ "$verbose" = 1 ]; then
+    echo "Staring ts-framework binary from shell script in verbose mode"
+    echo "- base path: \"$base_path\"";
+    echo " ";
+fi
+
+# Run node with experimental REPL await flag for interactive console
+node --experimental-repl-await "$base_path/dist/bin" $@
