@@ -1,5 +1,5 @@
 {
-  "testRegex": "(./tests/.*|\\.(spec|test))\\.(ts)$",
+  "testRegex": "(./tests/.*|\\.(spec))\\.(ts)$",
   "collectCoverage": true,
   "testEnvironment": "node",
   "coverageDirectory": "./coverage",
@@ -17,7 +17,7 @@
     "json"
   ],
   "testPathIgnorePatterns": [
-    "./dist",
+    "./build",
     "./tests/__mock__"
   ]
 }

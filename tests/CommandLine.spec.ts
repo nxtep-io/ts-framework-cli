@@ -22,10 +22,9 @@ describe("lib.cli.CommandLine", async () => {
 
     // Call the command line help programatically
     await new Promise(resolve =>
-      cmd.yargs.parse([""], (error, argv, output) => {
+      cmd.yargs.parse(["info", "./example/api/server.ts"], { development: true }, (error, argv, output) => {
         expect(error).toBeFalsy();
         expect(argv).toBeTruthy();
-        expect(output).toMatch(/Usage\: ts-framework <command> \[...args\]/gi);
         resolve();
       })
     );
