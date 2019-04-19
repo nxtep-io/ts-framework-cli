@@ -13,6 +13,64 @@ yarn add "nxtep-io/ts-framework-cli";
 npm install "github:nxtep-io/ts-framework-cli";
 ```
 
+## Getting Started
+
+**Generate a new project**
+
+Get started by generating a new TS Framework project using the built-in Yeoman generator:
+
+```bash
+ts-framework new app
+```
+
+After your project is created and all dependencies were installed, you can check its information directly from
+the typescript source, backed by `ts-node` runtime interpreter.
+
+```bash
+ts-framework info --development ./api/server.ts
+
+#  --------------------------------------------------------------------------------
+#                                                                                        
+#              ts-framework                                                              
+#              ============                                                              
+#                                                                                        
+#              Framework version:   nxtep-io/ts-framework#2.3.2                                       
+#                                                                                        
+#              App name:            ts-framework-cli                                          
+#              App version:         2.4.4                                       
+#              App port:            3000                             
+#                                                                                        
+#      
+#      --------------------------------------------------------------------------------
+#
+```
+
+**Start the development server**
+
+To start coding into your project, use the development server, with file watching and live-reloading, backed by `nodemon` and `ts-node`.
+
+```bash
+ts-framework watch ./api/server.ts
+```
+
+**Start the production server**
+
+Make sure you have the transpiled files from typescript ready before continuing.
+
+```bash
+yarn run tsc
+```
+
+Then, start the production server:
+
+```bash
+# Prepare same envs, if needed
+export PORT=80;
+
+# Start the production server
+ts-framework start ./api/server.ts
+```
+
 ## API Reference
 
 The full library reference is available in the `docs/` directory or published in https://nxtep-io.github.io/ts-framework-cli.
