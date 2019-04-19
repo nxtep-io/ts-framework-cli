@@ -18,7 +18,7 @@ export default class DatabaseCommand extends RunCommand {
 
   public async run({ entrypoint = this.options.entrypoint, ...options }) {
     // Force development mode for TS support using TS Node
-    const port = options.port || this.options.port;
+    const port = process.env.PORT || options.port || this.options.port;
     const distributionFile = await this.getEntrypoint({ entrypoint, env: 'development' });
     this.logger.debug(`Starting database in development environment from ${distributionFile}`);
 
