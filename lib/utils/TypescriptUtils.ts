@@ -6,9 +6,9 @@ import { BaseError } from "ts-framework-common";
 /**
  * Gets config from current directory package.json file
  */
-export const pkgConfig = async function tsConfig() {
+export const pkgConfig = async function pkgConfig(baseDir = process.cwd()) {
   // Try to find pkg file in current directory
-  const pkgConfigPath = Path.resolve(process.cwd(), "package.json");
+  const pkgConfigPath = Path.resolve(baseDir, "package.json");
   const pkgConfigRaw = fs.readFileSync(pkgConfigPath);
 
   if (!pkgConfigRaw || !pkgConfigRaw.toString()) {

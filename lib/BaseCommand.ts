@@ -79,7 +79,7 @@ export default abstract class BaseCommand {
           this.logger.verbose(`Found transpiled server in "${distributionFile}"`);
         } else {
           this.logger.verbose(`Could not find transpiled file"`);
-          
+          0
         }
       } else {
         // Runs from transpiled file
