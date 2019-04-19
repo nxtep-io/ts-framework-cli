@@ -19,7 +19,7 @@ export default class InfoCommand extends BaseCommand {
 
   public async run({ entrypoint = this.options.entrypoint, ...options }) {
     // Force production unless flag was supplied
-    const port = options.port || this.options.port;
+    const port = process.env.PORT || options.port || this.options.port;
     const env = options.development ? "development" : "production";
 
     const distributionFile = await this.getEntrypoint({ entrypoint, env });
