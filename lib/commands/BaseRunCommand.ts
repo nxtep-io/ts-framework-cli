@@ -30,7 +30,7 @@ export default class BaseRunCommand extends BaseCommand {
 
     if (env !== "development") {
       // Force production environment
-      process.env.NODE_ENV = "production";
+      process.env.NODE_ENV = process.env.NODE_ENV || "production";
     }
 
     // Load server constructor from distribution file path
