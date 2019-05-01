@@ -3,7 +3,7 @@ ts-framework-cli
 
 A minimalistic web framework for Typescript applications.
 
-## Getting started
+## Installation
 
 ```bash
 # Add to your dependencies using yarn
