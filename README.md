@@ -119,6 +119,36 @@ Note: The host may be ommitted for localhost, but in docker environments you may
 
 <br />
 
+## Running from docker
+
+The command line has also an official docker image in the repository based on `node:stretch`. You may clone it and build locally to automate workflows in Docker environments.
+
+```shell
+docker build -t ts-framework .
+docker run -it ts-framework --help
+```
+
+Or you may use it as a base image for your project deployments.
+
+```dockerfile
+# Use as base image.
+FROM ts-framework:latest
+
+# Prepare node dependencies
+WORKDIR /usr/src/my-app/
+COPY ./package.json ./yarn.lock /usr/src/my-app/
+RUN yarn install 
+
+# Copy the app source code
+COPY . /usr/src/my-app/
+
+# Start container with ts-framework command
+CMD ts-framework start api/server.ts
+```
+
+<br />
+
+
 ## API Reference
 
 The full library reference is available in the `docs/` directory or published in [nxtep-io.github.io/ts-framework-cli](https://nxtep-io.github.io/ts-framework-cli).
