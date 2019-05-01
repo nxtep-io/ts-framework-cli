@@ -1,0 +1,51 @@
+#!/bin/bash
+
+set +x;
+set -e;
+verbose=
+opts="--experimental-repl-await"
+
+SOURCE="${BASH_SOURCE[0]}"
+
+# Resolve $SOURCE until the file is no longer a symlink
+while [ -h "$SOURCE" ]; do 
+  DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+
+  # if $SOURCE was a relative symlink, we need to resolve it relative 
+  # to the path where the symlink file was located
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" #
+done
+
+# Prepare verbose mode flag
+case "$1" in
+-V|--verbose)
+    verbose=1
+    shift ;;
+esac
+
+# Prepare inspection flag for debugging
+case "$1" in
+-i|--inspect)
+    opts="$opts --inspect=$2"
+    shift 2;;
+esac
+
+# Prepare script paths
+parent_path="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
+base_path=$( expr "$parent_path" : "\(.*\)\/bin" );
+
+# Log base path if in verbose mode
+if [ "$verbose" = 1 ]; then
+    echo "Starting ts-framework binary from shell script in verbose mode"
+    echo "- Shell parent path: \"$parent_path\"";
+    echo "- Command line base path: \"$base_path\"";
+    echo "- Node command line arguments: "
+    echo "    $(echo $opts)"
+    echo "- Framework command line arguments: "
+    echo "    $@"
+    echo "    "
+fi
+
+# Run node with experimental REPL await flag for interactive console
+node $(echo $opts) "$base_path/dist/bin" $@
