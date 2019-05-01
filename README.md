@@ -53,6 +53,16 @@ To start coding into your project, use the development server, with file watchin
 ts-framework watch ./api/server.ts
 ```
 
+**Start the interactive console**
+
+The framework allows you to get into the instance and manipulate its components using a REPL interface, as an interactive console.
+
+```bash
+ts-framework console ./api/server.ts
+```
+
+
+
 **Start the production server**
 
 Make sure you have the transpiled files from typescript ready before continuing.
@@ -73,7 +83,7 @@ ts-framework start ./api/server.ts
 
 ## API Reference
 
-The full library reference is available in the `docs/` directory or published in https://nxtep-io.github.io/ts-framework-cli.
+The full library reference is available in the `docs/` directory or published in [nxtep-io.github.io/ts-framework-cli](https://nxtep-io.github.io/ts-framework-cli).
 
 
 ## License
