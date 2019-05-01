@@ -148,6 +148,21 @@ CMD ts-framework start api/server.ts
 
 <br />
 
+**Debugging with VS Code and Docker**
+
+The `watch` command spins up a `ts-node` instance to execute Typescript code without a compilation step, and a `nodemon` instance to restart `ts-node` on source code changes.
+When inside a docker container, this combination can confuse the VS Code debugger. VS Code won't be able to locate the source code from the source maps, and many features will be disabled, like breakpoints.  
+  
+You can manually add a source map path override to your VS Code's launch task, with
+```
+"sourceMapPathOverrides": {
+    "/usr/src/myapp/*": "${workspaceFolder}/*"
+},
+```
+Replace `/usr/src/myapp` with the container's source code path (Usually the argument of a `WORKDIR` call in the dockerfile).  
+Futher reading: https://github.com/Microsoft/vscode-recipes/issues/187
+
+<br />
 
 ## API Reference
 
