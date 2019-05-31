@@ -53,6 +53,8 @@ To start coding into your project, use the development server, with file watchin
 ts-framework watch ./api/server.ts
 ```
 
+The `watch` command will use the `listen` command behind the scenes. To use `run` instead, you can use the `-r` flag.
+
 **Start the interactive console**
 
 The framework allows you to get into the instance and manipulate its components using a REPL interface, as an interactive console.

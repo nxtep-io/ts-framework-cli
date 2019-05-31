@@ -6,7 +6,7 @@ import BaseCommand from "../BaseCommand";
 export default class WatchCommand extends BaseCommand {
   command = {
     syntax: "watch [entrypoint]",
-    description: "Starts the development server with live reload",
+    description: "Starts the development server with live reload using the listen command",
     builder: yargs => {
       yargs
         .string("p")
@@ -17,6 +17,11 @@ export default class WatchCommand extends BaseCommand {
         .string("i")
         .alias("i", "inspect")
         .describe("i", "Starts development server with inspection flags for debug");
+
+      yargs
+        .string("r")
+        .alias("r", "run")
+        .describe("r", "Starts the development server using the run command")
 
       return yargs;
     }
@@ -34,7 +39,8 @@ export default class WatchCommand extends BaseCommand {
     // Prepare command execution
     const port = process.env.PORT || options.port;
     const command = `node -r ts-node/register ${options.inspect ? `--inspect=${options.inspect}` : ""}`;
-    let exec = `${command} ${Path.join(__dirname, "../bin")} listen --development ${entrypoint}`;
+
+    let exec = `${command} ${Path.join(__dirname, "../bin")} ${options.run ? "run" : "listen"} --development ${entrypoint}`;
     exec += port ? ` --port ${port} ` : "";
 
     Nodemon({
