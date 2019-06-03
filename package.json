@@ -1,6 +1,6 @@
 {
   "name": "ts-framework-cli",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "description": "A minimalistic framework for Typescript applications",
   "author": "Luis Brito <luis@nxtep.io>",
   "license": "MIT",

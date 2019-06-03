@@ -61,7 +61,11 @@ To start coding into your project, use the development server, with file watchin
 ts-framework watch ./api/server.ts
 ```
 
+<<<<<<< HEAD
+The `watch` command will use the `listen` command behind the scenes. To use `run` instead, you can use the `-r` flag.
+=======
 <br />
+>>>>>>> v2.5
 
 **Start the interactive console**
 
