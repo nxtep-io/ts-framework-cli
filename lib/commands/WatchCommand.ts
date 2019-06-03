@@ -40,6 +40,7 @@ export default class WatchCommand extends BaseCommand {
     const port = process.env.PORT || options.port;
     const command = `node -r ts-node/register ${options.inspect ? `--inspect=${options.inspect}` : ""}`;
 
+    // tslint:disable-next-line:max-line-length
     let exec = `${command} ${Path.join(__dirname, "../bin")} ${options.run ? "run" : "listen"} --development ${entrypoint}`;
     exec += port ? ` --port ${port} ` : "";
 

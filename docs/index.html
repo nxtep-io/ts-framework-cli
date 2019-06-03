@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ts-framework-cli (v2.4.4)</title>
+	<title>ts-framework-cli (v2.5.3)</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">ts-framework-cli (v2.4.4)</a>
+					<a href="index.html" class="title">ts-framework-cli (v2.5.3)</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -56,7 +56,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1> ts-framework-cli (v2.4.4)</h1>
+			<h1> ts-framework-cli (v2.5.3)</h1>
 		</div>
 	</div>
 </header>
@@ -66,14 +66,52 @@
 			<div class="tsd-panel tsd-typography">
 				<h1 id="ts-framework-cli">ts-framework-cli</h1>
 				<p>A minimalistic web framework for Typescript applications.</p>
-				<h2 id="getting-started">Getting started</h2>
+				<h2 id="installation">Installation</h2>
 				<pre><code class="language-bash"><span class="hljs-comment"># Add to your dependencies using yarn</span>
 yarn add <span class="hljs-string">"nxtep-io/ts-framework-cli"</span>;
 
 <span class="hljs-comment"># Or, using NPM</span>
 npm install <span class="hljs-string">"github:nxtep-io/ts-framework-cli"</span>;</code></pre>
+				<h2 id="getting-started">Getting Started</h2>
+				<p><strong>Generate a new project</strong></p>
+				<p>Get started by generating a new TS Framework project using the built-in Yeoman generator:</p>
+				<pre><code class="language-bash">ts-framework new app</code></pre>
+				<p>After your project is created and all dependencies were installed, you can check its information directly from
+				the typescript source, backed by <code>ts-node</code> runtime interpreter.</p>
+				<pre><code class="language-bash">ts-framework info --development ./api/server.ts
+
+<span class="hljs-comment">#  --------------------------------------------------------------------------------</span>
+<span class="hljs-comment">#                                                                                        </span>
+<span class="hljs-comment">#              ts-framework                                                              </span>
+<span class="hljs-comment">#              ============                                                              </span>
+<span class="hljs-comment">#                                                                                        </span>
+<span class="hljs-comment">#              Framework version:   nxtep-io/ts-framework#2.3.2                                       </span>
+<span class="hljs-comment">#                                                                                        </span>
+<span class="hljs-comment">#              App name:            ts-framework-cli                                          </span>
+<span class="hljs-comment">#              App version:         2.4.4                                       </span>
+<span class="hljs-comment">#              App port:            3000                             </span>
+<span class="hljs-comment">#                                                                                        </span>
+<span class="hljs-comment">#      </span>
+<span class="hljs-comment">#      --------------------------------------------------------------------------------</span>
+<span class="hljs-comment">#</span></code></pre>
+				<p><strong>Start the development server</strong></p>
+				<p>To start coding into your project, use the development server, with file watching and live-reloading, backed by <code>nodemon</code> and <code>ts-node</code>.</p>
+				<pre><code class="language-bash">ts-framework watch ./api/server.ts</code></pre>
+				<p>The <code>watch</code> command will use the <code>listen</code> command behind the scenes. To use <code>run</code> instead, you can use the <code>-r</code> flag.</p>
+				<p><strong>Start the interactive console</strong></p>
+				<p>The framework allows you to get into the instance and manipulate its components using a REPL interface, as an interactive console.</p>
+				<pre><code class="language-bash">ts-framework console ./api/server.ts</code></pre>
+				<p><strong>Start the production server</strong></p>
+				<p>Make sure you have the transpiled files from typescript ready before continuing.</p>
+				<pre><code class="language-bash">yarn run tsc</code></pre>
+				<p>Then, start the production server:</p>
+				<pre><code class="language-bash"><span class="hljs-comment"># Prepare same envs, if needed</span>
+<span class="hljs-built_in">export</span> PORT=80;
+
+<span class="hljs-comment"># Start the production server</span>
+ts-framework start ./api/server.ts</code></pre>
 				<h2 id="api-reference">API Reference</h2>
-				<p>The full library reference is available in the <code>docs/</code> directory or published in <a href="https://nxtep-io.github.io/ts-framework-cli">https://nxtep-io.github.io/ts-framework-cli</a>.</p>
+				<p>The full library reference is available in the <code>docs/</code> directory or published in <a href="https://nxtep-io.github.io/ts-framework-cli">nxtep-io.github.io/ts-framework-cli</a>.</p>
 				<h2 id="license">License</h2>
 				<p>The project is licensed under the <a href="./LICENSE.md">MIT License</a>.</p>
 			</div>
