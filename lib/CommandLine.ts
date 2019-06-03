@@ -58,7 +58,7 @@ export default class CommandLine {
       .alias("v", "version");
 
     // Prepare logger instance
-    this.logger = options.logger || Logger.getInstance();
+    this.logger = options.logger || Logger.initialize();
 
     // Initialize commands using current options
     const cmdArr: (typeof BaseCommand)[] = options.commands || CommandLine.DEFAULT_COMMANDS;

@@ -30,8 +30,8 @@ export default class ListenCommand extends BaseCommand {
     this.logger.debug(`Starting server in "${env}" environment from ${distributionFile}`);
 
     if (env !== "development") {
-      // Force production environment
-      process.env.NODE_ENV = "production";
+      // Set production environment if missing
+      process.env.NODE_ENV = process.env.NODE_ENV || "production";
     }
 
     const instance = await this.load(distributionFile, { ...options, port });

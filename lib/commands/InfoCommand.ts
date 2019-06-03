@@ -26,15 +26,11 @@ export default class InfoCommand extends BaseCommand {
     this.logger.debug(`Starting server in "${env}" environment from ${distributionFile}`);
 
     if (env !== "development") {
-      // Force production environment
-      process.env.NODE_ENV = "production";
+      // Set production environment if missing
+      process.env.NODE_ENV = process.env.NODE_ENV || "production";
     }
 
     const instance = await this.load(distributionFile, { ...options, port });
-
-    // Manually start the server lifecycle without listening to express port
-    // await instance.onInit();
-    // await instance.onReady();
 
     // Prepare ts-framework info
     const pkg = await pkgConfig();
