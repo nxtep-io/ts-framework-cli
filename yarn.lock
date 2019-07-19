@@ -68,6 +68,28 @@
     "@sentry/utils" "4.4.2"
     tslib "^1.9.3"
 
+"@sentry/core@5.2.0":
+  version "5.2.0"
+  resolved "https://yarn.btcore.app/@sentry%2fcore/-/core-5.2.0.tgz#06e932fd338a25d2e13de7671f277f059b461705"
+  integrity sha512-s6rnJpJZMDIutcj2EIxyzJBjuYn3omVSjL2F8vOfw2oMZgTGJzQdz7a43iYokX/zFgzEDqz5zWGrhJ1wX/I8/w==
+  dependencies:
+    "@sentry/hub" "5.2.0"
+    "@sentry/minimal" "5.2.0"
+    "@sentry/types" "5.2.0"
+    "@sentry/utils" "5.2.0"
+    tslib "^1.9.3"
+
+"@sentry/core@5.5.0":
+  version "5.5.0"
+  resolved "https://yarn.btcore.app/@sentry%2fcore/-/core-5.5.0.tgz#574fdc9228c8b4a909c0140eb0d8b098175c0f47"
+  integrity sha512-xOcBud0t5mfhFdyd2tQQti4uuWSrLiJihpXzxeRpdCfk2ic+xmpeQs3G4UqnluvQDc48ug/Igt7LXfSBRBx4eg==
+  dependencies:
+    "@sentry/hub" "5.5.0"
+    "@sentry/minimal" "5.5.0"
+    "@sentry/types" "5.5.0"
+    "@sentry/utils" "5.5.0"
+    tslib "^1.9.3"
+
 "@sentry/hub@4.4.2":
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/@sentry/hub/-/hub-4.4.2.tgz#1399556fda06fb83c4f186c4aa842725f520159c"
@@ -77,6 +99,33 @@
     "@sentry/utils" "4.4.2"
     tslib "^1.9.3"
 
+"@sentry/hub@5.2.0":
+  version "5.2.0"
+  resolved "https://yarn.btcore.app/@sentry%2fhub/-/hub-5.2.0.tgz#4fde4b8b97aec3d6375d000f1151600c42cd2d72"
+  integrity sha512-vMHDHmhKWGMsPqQUaN6f+9p4XuGrLBTB30dV8ZFOXkVbQOSG20rjI9nMaSoDkELCmFFCIu9cL+mvuxLcA7TRug==
+  dependencies:
+    "@sentry/types" "5.2.0"
+    "@sentry/utils" "5.2.0"
+    tslib "^1.9.3"
+
+"@sentry/hub@5.5.0":
+  version "5.5.0"
+  resolved "https://yarn.btcore.app/@sentry%2fhub/-/hub-5.5.0.tgz#6b8eecf769fa693260d45e771f4bca15bdbc6f4b"
+  integrity sha512-+jKh5U1nv8ufoquGciWoZPOmKuEjFPH5m0VifCs6t3NcEbAq2qnfF26KUGqhUNznlUN/PkbWB4qMfKn14uNE2Q==
+  dependencies:
+    "@sentry/types" "5.5.0"
+    "@sentry/utils" "5.5.0"
+    tslib "^1.9.3"
+
+"@sentry/integrations@^5.2.0":
+  version "5.5.0"
+  resolved "https://yarn.btcore.app/@sentry%2fintegrations/-/integrations-5.5.0.tgz#4d36adb607c007cab30c2fd83af0e905f0b62a88"
+  integrity sha512-27B2CZEER50h5BIA7z32Cg80oD4UsVrreKglqpHLrhKhJ7KpoY3VhlEIEsoGclUyNuLXs1KtI0Op33EsgUpCxA==
+  dependencies:
+    "@sentry/types" "5.5.0"
+    "@sentry/utils" "5.5.0"
+    tslib "^1.9.3"
+
 "@sentry/minimal@4.4.2":
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/@sentry/minimal/-/minimal-4.4.2.tgz#13fffc6b17a2401b6a79947838a637626ab80b10"
@@ -84,6 +133,38 @@
   dependencies:
     "@sentry/hub" "4.4.2"
     "@sentry/types" "4.4.2"
+    tslib "^1.9.3"
+
+"@sentry/minimal@5.2.0":
+  version "5.2.0"
+  resolved "https://yarn.btcore.app/@sentry%2fminimal/-/minimal-5.2.0.tgz#6aad5f63cebceef51ee2b3b0010aee1e810a82b0"
+  integrity sha512-bMoT/+nctMSLo/qNOroTUILojIq/9FhGyW4tvTeHjDCYQorsg+FQqNLEpXo19IHi488Oy51qtBcBeldpxzN4bQ==
+  dependencies:
+    "@sentry/hub" "5.2.0"
+    "@sentry/types" "5.2.0"
+    tslib "^1.9.3"
+
+"@sentry/minimal@5.5.0":
+  version "5.5.0"
+  resolved "https://yarn.btcore.app/@sentry%2fminimal/-/minimal-5.5.0.tgz#ea7939b8efe307d25775b23227a3f85dfb46b274"
+  integrity sha512-o6O30+/pNrO7fTgwKxgZynHB7cMScJlw9HXgnNXgLXS6LBiqjYCQfVnWAgV//SyyG0uUlcjH3P6PnV6TsJOmVQ==
+  dependencies:
+    "@sentry/hub" "5.5.0"
+    "@sentry/types" "5.5.0"
+    tslib "^1.9.3"
+
+"@sentry/node@5.2.0":
+  version "5.2.0"
+  resolved "https://yarn.btcore.app/@sentry%2fnode/-/node-5.2.0.tgz#f4fa9ca924385f8c4564ffc5bc387fc305e029b8"
+  integrity sha512-pEXRGwwtnr33wGmbrKjvcwrfMWvE5vj9wqQ1nsrPSuGeMgkj9tOpxilfFVUq+hnz9am1L0C2/p17mn1d3tO/nw==
+  dependencies:
+    "@sentry/core" "5.2.0"
+    "@sentry/hub" "5.2.0"
+    "@sentry/types" "5.2.0"
+    "@sentry/utils" "5.2.0"
+    cookie "0.3.1"
+    https-proxy-agent "2.2.1"
+    lru_map "0.3.3"
     tslib "^1.9.3"
 
 "@sentry/node@^4.4.1":
@@ -102,10 +183,34 @@
     stack-trace "0.0.10"
     tslib "^1.9.3"
 
+"@sentry/node@^5.2.0":
+  version "5.5.0"
+  resolved "https://yarn.btcore.app/@sentry%2fnode/-/node-5.5.0.tgz#70a627fc3957132e592278ece457f73ab5dd0ec3"
+  integrity sha512-Qn60k7NqJhzpI7PnW/dOz2Y1ofD6kMKGEgLWAO5vcbNShyQj7m2JYFk0c7nFU9HDgertqkxQnvhvIGvT+QokaQ==
+  dependencies:
+    "@sentry/core" "5.5.0"
+    "@sentry/hub" "5.5.0"
+    "@sentry/types" "5.5.0"
+    "@sentry/utils" "5.5.0"
+    cookie "0.3.1"
+    https-proxy-agent "2.2.1"
+    lru_map "0.3.3"
+    tslib "^1.9.3"
+
 "@sentry/types@4.4.2":
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/@sentry/types/-/types-4.4.2.tgz#f38dd3bc671cd2f5983a85553aebeac9c2286b17"
   integrity sha512-QyQd6PKKIyjJgaq/RQjsxPJEWbXcuiWZ9RvSnhBjS5jj53HEzkM1qkbAFqlYHJ1DTJJ1EuOM4+aTmGzHe93zuA==
+
+"@sentry/types@5.2.0":
+  version "5.2.0"
+  resolved "https://yarn.btcore.app/@sentry%2ftypes/-/types-5.2.0.tgz#e42f2ad95c1c10f50656e6b668ff8c8aa06b99d5"
+  integrity sha512-QzMVYgONsScAiEGY5XRtSeMwH8464oRdaxCMTtXBuYfF9muvxHqQyF094GVRiconpgKelok5ke9HwrbNUEiE7w==
+
+"@sentry/types@5.5.0":
+  version "5.5.0"
+  resolved "https://yarn.btcore.app/@sentry%2ftypes/-/types-5.5.0.tgz#0e7d8e8359c7af685258d92b23831072bb79f46a"
+  integrity sha512-3otF/miVDth91o+iign00x0o31McUPeyIFbMjLbgeTRRW9rXpu2jGrcRrvHfofECtoqCf5Y734hwvvlBvFZeIw==
 
 "@sentry/utils@4.4.2":
   version "4.4.2"
@@ -113,6 +218,22 @@
   integrity sha512-j/Ad8G1abHlJdD2q7aWWbSOSeWB5M5v1R1VKL8YPlwEbSvvmEQWePhBKFI0qlnKd2ObdUQsj86pHEXJRSFNfCw==
   dependencies:
     "@sentry/types" "4.4.2"
+    tslib "^1.9.3"
+
+"@sentry/utils@5.2.0":
+  version "5.2.0"
+  resolved "https://yarn.btcore.app/@sentry%2futils/-/utils-5.2.0.tgz#1b97fbe9a9bf2f9a355670da6531dcac79d9e748"
+  integrity sha512-/0gWzWSot22P/Zkfz2lxXvuOiHAtM4uwkADlt1yN3mMPTaHD8feV9MTwjg+Z3KxKSZ005riJFncCO+PZQaydSQ==
+  dependencies:
+    "@sentry/types" "5.2.0"
+    tslib "^1.9.3"
+
+"@sentry/utils@5.5.0":
+  version "5.5.0"
+  resolved "https://yarn.btcore.app/@sentry%2futils/-/utils-5.5.0.tgz#5c516be0568f4d462ad550c723b78e3ad7776c4e"
+  integrity sha512-gO8Bs/QcKDn7ncc2f2fIOTPx2AiZKrGj4us1Yxu6mBU8JZqMQRl9XjDMFAUECJQvquBAta+TFJyYj71ZedeQUQ==
+  dependencies:
+    "@sentry/types" "5.5.0"
     tslib "^1.9.3"
 
 "@sinonjs/commons@^1.0.2":
@@ -262,6 +383,14 @@
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.3.tgz#7ee330ba7caafb98090bece86a5ee44115904c2c"
   integrity sha512-ewFXqrQHlFsgc09MK5jP5iR7vumV/BYayNC6PgJO2LPe8vrnNFyjQjSppfEngITi0qvfKtzFvgKymGheFM9UOA==
+
+"@types/rimraf@^2.0.2":
+  version "2.0.2"
+  resolved "https://yarn.btcore.app/@types%2frimraf/-/rimraf-2.0.2.tgz#7f0fc3cf0ff0ad2a99bb723ae1764f30acaf8b6e"
+  integrity sha512-Hm/bnWq0TCy7jmjeN5bKYij9vw5GrDFWME4IuxV08278NtU/VdGbzsBohcCUJ7+QMqmUq5hpRKB39HeQWJjztQ==
+  dependencies:
+    "@types/glob" "*"
+    "@types/node" "*"
 
 "@types/serve-static@*":
   version "1.13.2"
@@ -771,11 +900,6 @@ base64-js@^1.0.2:
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.3.0.tgz#cab1e6118f051095e58b5281aea8c1cd22bfc0e3"
   integrity sha512-ccav/yGvoa80BQDljCxsmmQ3Xvx60/UpBIij5QN21W3wBi/hhIC9OoO+KLpu9IJTS9j4DRVJ3aDDF9cMSoa2lw==
 
-base64url@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/base64url/-/base64url-2.0.0.tgz#eac16e03ea1438eff9423d69baa36262ed1f70bb"
-  integrity sha1-6sFuA+oUOO/5Qj1puqNiYu0fcLs=
-
 base@^0.11.1:
   version "0.11.2"
   resolved "https://registry.yarnpkg.com/base/-/base-0.11.2.tgz#7bde5ced145b6d551a90db87f83c558b4eb48a8f"
@@ -1064,11 +1188,6 @@ chardet@^0.7.0:
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
-charenc@~0.0.1:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
-  integrity sha1-wKHS86cJLgN3S/qD8UwPxXkKhmc=
-
 chokidar@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.0.4.tgz#356ff4e2b0e8e43e322d18a372460bbcf3accd26"
@@ -1304,7 +1423,7 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.12.1, commander@^2.14.1, commander@^2.19.0, commander@^2.9.0:
+commander@^2.12.1, commander@^2.14.1, commander@^2.9.0:
   version "2.19.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.19.0.tgz#f6198aa84e5b83c46054b94ddedbfed5ee9ff12a"
   integrity sha512-6tvAOO+D6OENvRAh524Dh9jcfKTYDQAqvqezbCW82xj5X0pSrcpxtvRKHLG0yBY6SD7PSDrJaj+0AiOcKVd1Xg==
@@ -1455,11 +1574,6 @@ cross-spawn@^6.0.0, cross-spawn@^6.0.5:
     semver "^5.5.0"
     shebang-command "^1.2.0"
     which "^1.2.9"
-
-crypt@~0.0.1:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/crypt/-/crypt-0.0.2.tgz#88d7ff7ec0dfb86f713dc87bbb42d044d3e6c41b"
-  integrity sha1-iNf/fsDfuG9xPch7u0LQRNPmxBs=
 
 crypto-random-string@^1.0.0:
   version "1.0.0"
@@ -2336,18 +2450,6 @@ gauge@~2.7.3:
     strip-ansi "^3.0.1"
     wide-align "^1.1.0"
 
-generator-ts-framework@nxtep-io/generator-ts-framework:
-  version "1.0.0"
-  resolved "https://codeload.github.com/nxtep-io/generator-ts-framework/tar.gz/4ab82ba49b9a027ec70fc7960d6b39f8f2c7b2ed"
-  dependencies:
-    chalk "^2.1.0"
-    merge ">=1.2.1"
-    mkdirp "^0.5.1"
-    pluralize "^7.0.0"
-    underscore.string "^3.3.5"
-    yeoman-generator "^2.0.1"
-    yosay "^2.0.1"
-
 generator-ts-framework@nxtep-io/generator-ts-framework#1.1.0:
   version "1.1.0"
   resolved "https://codeload.github.com/nxtep-io/generator-ts-framework/tar.gz/857e44709b26cbb60790e4aac5402da08e27d231"
@@ -2417,7 +2519,7 @@ gh-got@^6.0.0:
     got "^7.0.0"
     is-plain-obj "^1.1.0"
 
-git-rev-sync@^1.12.0, git-rev-sync@^1.9.1:
+git-rev-sync@^1.12.0:
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/git-rev-sync/-/git-rev-sync-1.12.0.tgz#4468406c7e6c3ba4cf4587999e1adb28d9d1af55"
   integrity sha1-RGhAbH5sO6TPRYeZnhrbKNnRr1U=
@@ -2769,9 +2871,9 @@ http-signature@~1.2.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
-https-proxy-agent@^2.2.1:
+https-proxy-agent@2.2.1, https-proxy-agent@^2.2.1:
   version "2.2.1"
-  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.2.1.tgz#51552970fa04d723e04c56d04178c3f92592bbc0"
+  resolved "https://yarn.btcore.app/https-proxy-agent/-/https-proxy-agent-2.2.1.tgz#51552970fa04d723e04c56d04178c3f92592bbc0"
   integrity sha512-HPCTS1LW51bcyMYbxUIOO4HEOlQ1/1qRaFWcyxvwaqUS9TY88aoEuHUY33kuAh1YhVVaDQhLZsnPd+XNARWZlQ==
   dependencies:
     agent-base "^4.1.0"
@@ -2972,7 +3074,7 @@ is-binary-path@^1.0.0:
   dependencies:
     binary-extensions "^1.0.0"
 
-is-buffer@^1.1.5, is-buffer@~1.1.1:
+is-buffer@^1.1.5:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
   integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
@@ -4114,6 +4216,11 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
+lru_map@0.3.3:
+  version "0.3.3"
+  resolved "https://yarn.btcore.app/lru_map/-/lru_map-0.3.3.tgz#b5c8351b9464cbd750335a79650a0ec0e56118dd"
+  integrity sha1-tcg1G5Rky9dQM1p5ZQoOwOVhGN0=
+
 lsmod@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lsmod/-/lsmod-1.0.0.tgz#9a00f76dca36eb23fa05350afe1b585d4299e64b"
@@ -4166,15 +4273,6 @@ math-random@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/math-random/-/math-random-1.0.1.tgz#8b3aac588b8a66e4975e3cdea67f7bb329601fac"
   integrity sha1-izqsWIuKZuSXXjzepn97sylgH6w=
-
-md5@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/md5/-/md5-2.2.1.tgz#53ab38d5fe3c8891ba465329ea23fac0540126f9"
-  integrity sha1-U6s41f48iJG6RlMp6iP6wFQBJvk=
-  dependencies:
-    charenc "~0.0.1"
-    crypt "~0.0.1"
-    is-buffer "~1.1.1"
 
 media-typer@0.3.0:
   version "0.3.0"
@@ -4439,6 +4537,32 @@ nano-errors@nxtep-io/nano-errors:
   version "1.0.0"
   resolved "https://codeload.github.com/nxtep-io/nano-errors/tar.gz/1067e4d43c285e806c8797b01d97640245983acc"
   dependencies:
+    "@types/winston" "^2.4.4"
+    triple-beam "^1.3.0"
+    uuid "^3.3.2"
+    winston "^3.2.1"
+  optionalDependencies:
+    clean-stack "^2.0.0"
+
+nano-errors@nxtep-io/nano-errors#1.1.0:
+  version "1.1.0"
+  resolved "https://codeload.github.com/nxtep-io/nano-errors/tar.gz/6aa809b91f3f399bc65b579fad9a8e312db71f0e"
+  dependencies:
+    "@sentry/integrations" "^5.2.0"
+    "@sentry/node" "5.2.0"
+    "@types/winston" "^2.4.4"
+    triple-beam "^1.3.0"
+    uuid "^3.3.2"
+    winston "^3.2.1"
+  optionalDependencies:
+    clean-stack "^2.0.0"
+
+nano-errors@nxtep-io/nano-errors#1.1.1:
+  version "1.1.1"
+  resolved "https://codeload.github.com/nxtep-io/nano-errors/tar.gz/9857dc9d2fa398260507de13d57c872774929821"
+  dependencies:
+    "@sentry/integrations" "^5.2.0"
+    "@sentry/node" "5.2.0"
     "@types/winston" "^2.4.4"
     triple-beam "^1.3.0"
     uuid "^3.3.2"
@@ -5268,17 +5392,6 @@ range-parser@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.0.tgz#f49be6b487894ddc40dcc94a322f611092e00d5e"
   integrity sha1-9JvmtIeJTdxA3MlKMi9hEJLgDV4=
-
-raven@^2.1.0:
-  version "2.6.4"
-  resolved "https://registry.yarnpkg.com/raven/-/raven-2.6.4.tgz#458d4a380c8fbb59e0150c655625aaf60c167ea3"
-  integrity sha512-6PQdfC4+DQSFncowthLf+B6Hr0JpPsFBgTVYTAOq7tCmx/kR4SXbeawtPch20+3QfUcQDoJBLjWW1ybvZ4kXTw==
-  dependencies:
-    cookie "0.3.1"
-    md5 "^2.2.1"
-    stack-trace "0.0.10"
-    timed-out "4.0.1"
-    uuid "3.3.2"
 
 raw-body@2.3.3:
   version "2.3.3"
@@ -6247,7 +6360,7 @@ through@2, through@^2.3.6:
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
   integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
 
-timed-out@4.0.1, timed-out@^4.0.0:
+timed-out@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/timed-out/-/timed-out-4.0.1.tgz#f32eacac5a175bea25d7fab565ab3ed8741ef56f"
   integrity sha1-8y6srFoXW+ol1/q1Zas+2HQe9W8=
@@ -6334,23 +6447,6 @@ triple-beam@^1.2.0, triple-beam@^1.3.0:
   resolved "https://registry.yarnpkg.com/triple-beam/-/triple-beam-1.3.0.tgz#a595214c7298db8339eeeee083e4d10bd8cb8dd9"
   integrity sha512-XrHUvV5HpdLmIj4uVMxHggLbFSZYIn7HEWsqePZcI50pco+MPqJ50wMGY794X7AOOhxOBAjbkqfAbEe/QMp2Lw==
 
-ts-framework-common@nxtep-io/ts-framework-common#2.3.1:
-  version "2.3.1"
-  resolved "https://codeload.github.com/nxtep-io/ts-framework-common/tar.gz/9a4f5b60e9f7244ca8e81260a3f9e32349ddd77c"
-  dependencies:
-    "@sentry/node" "^4.4.1"
-    "@types/express" "^4.16.0"
-    "@types/lodash" "^4.14.119"
-    clean-stack "^1.3.0"
-    fast-safe-stringify "^2.0.6"
-    git-rev-sync "^1.12.0"
-    lodash "^4.17.11"
-    pjson "^1.0.9"
-    triple-beam "^1.3.0"
-    winston "^3.1.0"
-    winston-elasticsearch "github:nxtep-io/winston-elasticsearch"
-    winston-transport "^4.2.0"
-
 ts-framework-common@nxtep-io/ts-framework-common#2.3.2:
   version "2.3.2"
   resolved "https://codeload.github.com/nxtep-io/ts-framework-common/tar.gz/1d9272a1b5f2a0f997031d5dae540edbf0f953e1"
@@ -6368,13 +6464,19 @@ ts-framework-common@nxtep-io/ts-framework-common#2.3.2:
     winston-elasticsearch "github:nxtep-io/winston-elasticsearch"
     winston-transport "^4.2.0"
 
-ts-framework-common@nxtep-io/ts-framework-common#2.4.0:
-  version "2.4.0"
-  resolved "https://codeload.github.com/nxtep-io/ts-framework-common/tar.gz/a53b44bde30d49f323b3bf1a4010a899e667f825"
+ts-framework-common@nxtep-io/ts-framework-common#2.4.1:
+  version "2.4.1"
+  resolved "https://codeload.github.com/nxtep-io/ts-framework-common/tar.gz/822bd24f170fe725b62c575374c5aeccc3bde053"
   dependencies:
-    "@sentry/node" "^4.4.1"
     "@types/express" "^4.16.0"
-    nano-errors nxtep-io/nano-errors
+    nano-errors nxtep-io/nano-errors#1.1.0
+
+ts-framework-common@nxtep-io/ts-framework-common#2.4.2:
+  version "2.4.2"
+  resolved "https://codeload.github.com/nxtep-io/ts-framework-common/tar.gz/38d912f8559ab12fda4fa8003cbdc167f1134c6c"
+  dependencies:
+    "@types/express" "^4.16.0"
+    nano-errors nxtep-io/nano-errors#1.1.1
 
 ts-framework-sql@nxtep-io/ts-framework-sql#2.3.0:
   version "2.3.0"
@@ -6387,20 +6489,19 @@ ts-framework-sql@nxtep-io/ts-framework-sql#2.3.0:
     ts-framework-common nxtep-io/ts-framework-common#2.3.2
     typeorm "^0.2.4"
 
-ts-framework@nxtep-io/ts-framework#2.3.2:
-  version "2.3.1"
-  resolved "https://codeload.github.com/nxtep-io/ts-framework/tar.gz/ecb987c6f1b81aaff525d22ebad26a02f70c9582"
+ts-framework@nxtep-io/ts-framework#2.6.0:
+  version "2.6.0"
+  resolved "https://codeload.github.com/nxtep-io/ts-framework/tar.gz/cf869b35162836667e30867363de42daa0204cb2"
   dependencies:
-    "@sentry/node" "^4.4.1"
+    "@sentry/node" "^5.2.0"
     "@types/cors" "^2.8.4"
     "@types/express" "^4.16.0"
     "@types/helmet" "^0.0.38"
+    "@types/json5" "^0.0.30"
     "@types/lodash" "^4.14.116"
-    async "^2.5.0"
-    base64url "^2.0.0"
+    "@types/rimraf" "^2.0.2"
     body-parser "^1.18.2"
     clean-stack "^1.3.0"
-    commander "^2.19.0"
     cookie-parser "^1.4.3"
     cors "^2.8.4"
     express "^4.16.3"
@@ -6408,26 +6509,21 @@ ts-framework@nxtep-io/ts-framework#2.3.2:
     express-useragent "^1.0.8"
     fclone "^1.0.11"
     fs-extra "^7.0.1"
-    generator-ts-framework nxtep-io/generator-ts-framework
-    git-rev-sync "^1.9.1"
     hat "^0.0.3"
     helmet "^3.13.0"
-    lodash "^4.17.10"
     method-override "^2.3.10"
     multer "^1.3.0"
+    nano-errors nxtep-io/nano-errors
     nodemon "^1.18.8"
     pjson "^1.0.9"
     request-ip "^2.0.2"
     rimraf "^2.6.2"
     source-map-support "^0.5.9"
-    ts-framework-common nxtep-io/ts-framework-common#2.3.1
+    ts-framework-common nxtep-io/ts-framework-common#2.4.1
     ts-node "^7.0.1"
     typescript "^3.2.2"
     upath "^1.1.0"
-    urijs "^1.19.0"
     url-join "^4.0.0"
-    winston-raven-sentry "^1.0.1"
-    yeoman-environment "^2.3.4"
 
 ts-jest@^23.1.2:
   version "23.10.5"
@@ -6768,11 +6864,6 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-urijs@^1.19.0:
-  version "1.19.1"
-  resolved "https://registry.yarnpkg.com/urijs/-/urijs-1.19.1.tgz#5b0ff530c0cbde8386f6342235ba5ca6e995d25a"
-  integrity sha512-xVrGVi94ueCJNrBSTjWqjvtgvl3cyOTThp2zaMaFNGp3F542TR6sM3f2o8RqZl+AwteClSVmoCyt0ka4RjQOQg==
-
 urix@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
@@ -6818,7 +6909,7 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
-uuid@3.3.2, uuid@^3.3.2:
+uuid@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
   integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
@@ -6974,14 +7065,6 @@ widest-line@^2.0.0:
     triple-beam "^1.3.0"
     winston "^3.0.0"
     winston-transport " ^4.2.0"
-
-winston-raven-sentry@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/winston-raven-sentry/-/winston-raven-sentry-1.0.1.tgz#c2f0d470e421d9df7224b39fd16561d38942c95a"
-  integrity sha512-TAaAJlFMpCKXUNDjCu/I1tBlDsVUxvRzPFlYu3PeaiJg/aXVnp1+W4HHqxJTzTIR5lrG8PqsfBIw5ojG8H71Zg==
-  dependencies:
-    lodash "^4.17.4"
-    raven "^2.1.0"
 
 "winston-transport@ ^4.2.0", winston-transport@^4.2.0, winston-transport@^4.3.0:
   version "4.3.0"
