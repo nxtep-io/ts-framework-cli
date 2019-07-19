@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ts-framework-cli (v2.4.4)</title>
+	<title>ts-framework-cli (v2.6.0)</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">ts-framework-cli (v2.4.4)</a>
+					<a href="index.html" class="title">ts-framework-cli (v2.6.0)</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -56,7 +56,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1> ts-framework-cli (v2.4.4)</h1>
+			<h1> ts-framework-cli (v2.6.0)</h1>
 		</div>
 	</div>
 </header>
@@ -66,14 +66,100 @@
 			<div class="tsd-panel tsd-typography">
 				<h1 id="ts-framework-cli">ts-framework-cli</h1>
 				<p>A minimalistic web framework for Typescript applications.</p>
-				<h2 id="getting-started">Getting started</h2>
+				<h2 id="installation">Installation</h2>
+				<p>Start by installing the command line globally.</p>
 				<pre><code class="language-bash"><span class="hljs-comment"># Add to your dependencies using yarn</span>
-yarn add <span class="hljs-string">"nxtep-io/ts-framework-cli"</span>;
+yarn global add <span class="hljs-string">"nxtep-io/ts-framework-cli"</span>;
 
 <span class="hljs-comment"># Or, using NPM</span>
-npm install <span class="hljs-string">"github:nxtep-io/ts-framework-cli"</span>;</code></pre>
+npm global install <span class="hljs-string">"github:nxtep-io/ts-framework-cli"</span>;</code></pre>
+				<p>It will also work as a project dependency calling directly from <code>node_modules</code> or <code>yarn run</code>.</p>
+				<br />
+				<h2 id="getting-started">Getting Started</h2>
+				<p><strong>Generate a new project</strong></p>
+				<p>Get started by generating a new TS Framework project using the built-in Yeoman generator:</p>
+				<pre><code class="language-bash">ts-framework new app</code></pre>
+				<p>After your project is created and all dependencies were installed, you can check its information directly from
+				the typescript source, backed by <code>ts-node</code> runtime interpreter.</p>
+				<pre><code class="language-bash">ts-framework info --development ./api/server.ts
+
+<span class="hljs-comment">#  --------------------------------------------------------------------------------</span>
+<span class="hljs-comment">#                                                                                        </span>
+<span class="hljs-comment">#              ts-framework                                                              </span>
+<span class="hljs-comment">#              ============                                                              </span>
+<span class="hljs-comment">#                                                                                        </span>
+<span class="hljs-comment">#              Framework version:   nxtep-io/ts-framework#2.3.2                                       </span>
+<span class="hljs-comment">#                                                                                        </span>
+<span class="hljs-comment">#              App name:            ts-framework-cli                                          </span>
+<span class="hljs-comment">#              App version:         2.4.4                                       </span>
+<span class="hljs-comment">#              App port:            3000                             </span>
+<span class="hljs-comment">#                                                                                        </span>
+<span class="hljs-comment">#      </span>
+<span class="hljs-comment">#      --------------------------------------------------------------------------------</span>
+<span class="hljs-comment">#</span></code></pre>
+				<br />
+				<p><strong>Start the development server</strong></p>
+				<p>To start coding into your project, use the development server, with file watching and live-reloading, backed by <code>nodemon</code> and <code>ts-node</code>.</p>
+				<pre><code class="language-bash">ts-framework watch ./api/server.ts</code></pre>
+				<br />
+				<p><strong>Start the interactive console</strong></p>
+				<p>The framework allows you to get into the instance and manipulate its components using a REPL interface, as an interactive console.</p>
+				<pre><code class="language-bash">ts-framework console ./api/server.ts</code></pre>
+				<br />
+				<p><strong>Start the production server</strong></p>
+				<p>Make sure you have the transpiled files from typescript ready before continuing.</p>
+				<pre><code class="language-bash">yarn run tsc</code></pre>
+				<p>Then, start the production server:</p>
+				<pre><code class="language-bash"><span class="hljs-comment"># Prepare same envs, if needed</span>
+<span class="hljs-built_in">export</span> PORT=80;
+
+<span class="hljs-comment"># Start the production server</span>
+ts-framework start ./api/server.ts</code></pre>
+				<br />
+				<p><strong>Verbose and Inspection mode</strong></p>
+				<p>You can run the command in verbose mode starting with the <code>-v</code>or <code>--verbose</code> flag. It is positional for the verbose mode
+				to be also applied to the shell scripts, must the be first one.</p>
+				<pre><code class="language-shell">ts-framework -V listen api/server.ts</code></pre>
+				<br />
+				<p>To start the command in inspection mode (debug), you must pass the <code>-i HOST:PORT</code> or <code>--inspect HOST:PORT</code> flag. It is also positional,
+				must be the second one when <code>verbose</code> is present. If not in verbose mode, it must be the first one.</p>
+				<pre><code class="language-shell"><span class="hljs-meta">#</span><span class="bash"> In regular mode</span>
+ts-framework --inspect 9229 listen api/server.ts
+<span class="hljs-meta">
+#</span><span class="bash"> In verbose mode</span>
+ts-framework -V --inspect 0.0.0.0:9229 listen api/server.ts</code></pre>
+				<p>Note: The host may be ommitted for localhost, but in docker environments you may need to pass <code>0.0.0.0:PORT</code> to make it work properly.</p>
+				<br />
+				<h2 id="running-from-docker">Running from docker</h2>
+				<p>The command line has also an official docker image in the repository based on <code>node:stretch</code>. You may clone it and build locally to automate workflows in Docker environments.</p>
+				<pre><code class="language-shell">docker build -t ts-framework .
+docker run -it ts-framework --help</code></pre>
+				<p>Or you may use it as a base image for your project deployments.</p>
+				<pre><code class="language-dockerfile"><span class="hljs-comment"># Use as base image.</span>
+<span class="hljs-keyword">FROM</span> ts-framework:latest
+
+<span class="hljs-comment"># Prepare node dependencies</span>
+<span class="hljs-keyword">WORKDIR</span><span class="bash"> /usr/src/my-app/
+</span><span class="hljs-keyword">COPY</span><span class="bash"> ./package.json ./yarn.lock /usr/src/my-app/
+</span><span class="hljs-keyword">RUN</span><span class="bash"> yarn install 
+</span>
+<span class="hljs-comment"># Copy the app source code</span>
+<span class="hljs-keyword">COPY</span><span class="bash"> . /usr/src/my-app/
+</span>
+<span class="hljs-comment"># Start container with ts-framework command</span>
+<span class="hljs-keyword">CMD</span><span class="bash"> ts-framework start api/server.ts</span></code></pre>
+				<br />
+				<p><strong>Debugging with VS Code and Docker</strong></p>
+				<p>The <code>watch</code> command spins up a <code>ts-node</code> instance to execute Typescript code without a compilation step, and a <code>nodemon</code> instance to restart <code>ts-node</code> on source code changes.
+				When inside a docker container, this combination can confuse the VS Code debugger. VS Code won&#39;t be able to locate the source code from the source maps, and many features will be disabled, like breakpoints.  </p>
+				<p>You can manually add a source map path override to your VS Code&#39;s launch task, with</p>
+				<pre><code><span class="hljs-string">"sourceMapPathOverrides"</span>: {
+    <span class="hljs-string">"/usr/src/myapp/*"</span>: <span class="hljs-string">"<span class="hljs-variable">${workspaceFolder}</span>/*"</span>
+},</code></pre><p>Replace <code>/usr/src/myapp</code> with the container&#39;s source code path (Usually the argument of a <code>WORKDIR</code> call in the dockerfile).<br>Futher reading: <a href="https://github.com/Microsoft/vscode-recipes/issues/187">https://github.com/Microsoft/vscode-recipes/issues/187</a></p>
+				<br />
 				<h2 id="api-reference">API Reference</h2>
-				<p>The full library reference is available in the <code>docs/</code> directory or published in <a href="https://nxtep-io.github.io/ts-framework-cli">https://nxtep-io.github.io/ts-framework-cli</a>.</p>
+				<p>The full library reference is available in the <code>docs/</code> directory or published in <a href="https://nxtep-io.github.io/ts-framework-cli">nxtep-io.github.io/ts-framework-cli</a>.</p>
+				<br />
 				<h2 id="license">License</h2>
 				<p>The project is licensed under the <a href="./LICENSE.md">MIT License</a>.</p>
 			</div>

@@ -29,8 +29,8 @@ export default class BaseRunCommand extends BaseCommand {
     this.logger.debug(`Starting workers in "${env}" environment from ${distributionFile}`);
 
     if (env !== "development") {
-      // Force production environment
-      process.env.NODE_ENV = "production";
+      // Set production environment if missing
+      process.env.NODE_ENV = process.env.NODE_ENV || "production";
     }
 
     // Load server constructor from distribution file path
