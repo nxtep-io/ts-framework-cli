@@ -6,7 +6,7 @@ describe("lib.cli.CommandLine", async () => {
     expect(cmd.yargs).toBeTruthy();
 
     // Call the command line help programatically
-    await new Promise(resolve =>
+    await new Promise<void>(resolve =>
       cmd.yargs.parse(["--help"], (error, argv, output) => {
         expect(error).toBeFalsy();
         expect(argv).toBeTruthy();
@@ -21,7 +21,7 @@ describe("lib.cli.CommandLine", async () => {
     expect(cmd.yargs).toBeTruthy();
 
     // Call the command line help programatically
-    await new Promise(resolve =>
+    await new Promise<void>(resolve =>
       cmd.yargs.parse(["info", "./example/api/server.ts"], { development: true }, (error, argv, output) => {
         expect(error).toBeFalsy();
         expect(argv).toBeTruthy();

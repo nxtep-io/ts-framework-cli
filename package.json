@@ -1,6 +1,6 @@
 {
   "name": "ts-framework-cli",
-  "version": "2.6.0",
+  "version": "2.8.0",
   "description": "A minimalistic framework for Typescript applications",
   "author": "Luis Brito <luis@nxtep.io>",
   "license": "MIT",
@@ -40,7 +40,9 @@
   },
   "resolutions": {
     "nodemon/upath": "1.1.0",
-    "nodemon/**/upath": "1.1.0"
+    "nodemon/**/upath": "1.1.0",
+    "**/ts-framework": "nxtep-io/ts-framework#2.8.0",
+    "**/ts-framework-common": "nxtep-io/ts-framework-common#2.5.0"
   },
   "dependencies": {
     "@types/json5": "^0.0.30",
@@ -48,33 +50,33 @@
     "generator-ts-framework": "nxtep-io/generator-ts-framework#1.1.0",
     "json": "^9.0.6",
     "json5": "^2.1.0",
-    "ts-framework": "nxtep-io/ts-framework#2.6.0",
-    "ts-framework-common": "nxtep-io/ts-framework-common#2.4.2",
+    "ts-framework": "nxtep-io/ts-framework#2.8.0",
+    "ts-framework-common": "nxtep-io/ts-framework-common#2.5.0",
     "typeorm": "^0.2.11",
     "uuid": "^3.3.2",
     "yargs": "^12.0.5",
     "yeoman-environment": "^2.3.4"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.1",
+    "@types/jest": "^26.0.20",
     "husky": "^1.0.0-rc.13",
-    "jest": "^23.4.2",
+    "jest": "^26.6.3",
     "lint-staged": "^7.2.0",
-    "nodemon": "^1.18.9",
+    "nodemon": "^2.0.7",
     "nxtep-typedoc-theme": "nxtep-io/nxtep-typedoc-theme",
     "prettier": "^1.14.0",
     "rimraf": "^2.6.2",
     "sinon": "^5.0.3",
-    "ts-jest": "^23.1.2",
-    "ts-node": "^7.0.1",
+    "ts-jest": "^26.5.3",
+    "ts-node": "^9.1.1",
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.9.2",
     "tslint-config-prettier": "^1.14.0",
     "tslint-no-circular-imports": "^0.5.0",
     "typedoc": "^0.13.0",
-    "typescript": "^3.2.2"
+    "typescript": "^4.2.3"
   },
   "optionalDependencies": {
-    "ts-framework-sql": "nxtep-io/ts-framework-sql#2.3.0"
+    "ts-framework-sql": "nxtep-io/ts-framework-sql"
   }
 }

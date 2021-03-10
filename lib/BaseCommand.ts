@@ -138,5 +138,5 @@ export default abstract class BaseCommand {
   /**
    * Executes the command when asked by the Command Line with the argv object.
    */
-  public abstract async run(argv: any): Promise<void>;
+  public abstract run(argv: any): Promise<void>;
 }
