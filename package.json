@@ -49,7 +49,7 @@
     "@types/yargs": "^12.0.5",
     "generator-ts-framework": "nxtep-io/generator-ts-framework#1.1.0",
     "json": "^9.0.6",
-    "json5": "^2.1.0",
+    "json5": "^2.2.2",
     "ts-framework": "nxtep-io/ts-framework#2.8.0",
     "ts-framework-common": "nxtep-io/ts-framework-common#2.5.0",
     "typeorm": "^0.2.11",
